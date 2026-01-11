@@ -1,35 +1,7 @@
-const quantity = 5;
-const pricePerDroid = 3000;
-
-function makeTransaction1(quantity, pricePerDroid) {
+function makeTransaction(quantity, pricePerDroid) {
   let totalPrice = quantity * pricePerDroid;
-  console.log("🚀 ~ makeTransaction ~ totalPrice:", totalPrice);
-  const message =
-    "You ordered " + quantity + " droids worth " + totalPrice + " credits!";
-  console.log(message);
+  return `You ordered ${quantity} droids worth ${pricePerDroid} credits!`;
 }
-makeTransaction1(quantity, pricePerDroid);
-
-function makeTransaction2(quantity, pricePerDroid) {
-  let totalPrice = quantity * pricePerDroid;
-  console.log("🚀 ~ makeTransaction ~ totalPrice:", totalPrice);
-
-  console.log(
-    "You ordered %s droids worth %s credits!",
-    quantity,
-    pricePerDroid
-  );
-}
-makeTransaction2(quantity, pricePerDroid);
-
-function makeTransaction2(quantity, pricePerDroid) {
-  let totalPrice = quantity * pricePerDroid;
-  console.log("🚀 ~ makeTransaction ~ totalPrice:", totalPrice);
-
-  console.log(
-    "You ordered %f droids worth %f credits!",
-    quantity,
-    pricePerDroid
-  );
-}
-makeTransaction2(quantity, pricePerDroid);
+console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
+console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
+console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
